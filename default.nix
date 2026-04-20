@@ -14,10 +14,6 @@
     # Set to true if you have a Nerd Font installed and selected in the terminal
     have_nerd_font = true;
 
-    # disable netrw
-    loaded_netrw = 1;
-    loaded_netrwPlugin = 1;
-
     # colorscheme style
     edge_style = "aura";
   };
@@ -179,9 +175,12 @@
     }
   ];
 
-  # Colorscheme
-  extraPlugins = [ pkgs.vimPlugins.edge ];
-  colorscheme = "edge";
+  colorschemes.gruvbox-material = {
+    enable = true;
+    settings = {
+      float_style = "blend";
+    };
+  };
 
   # Better icons
   plugins.web-devicons.enable = true;
