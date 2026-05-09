@@ -7,6 +7,7 @@ inputs: {
           visible = true;
         };
       };
+      window.position = "float";
       default_component_configs = {
         file_size.enabled = false;
         git_status = {
@@ -42,7 +43,7 @@ inputs: {
     {
       mode = "n";
       key = "<leader>e";
-      action = "<cmd>Neotree position=float<CR>";
+      action = "<cmd>Neotree<CR>";
       options = { desc = "Explorer"; };
     }
   ];
