@@ -27,6 +27,9 @@ inputs: {
 
       # erlang
       elp.enable = true;
+
+      # elixir
+      elixirls.enable = true;
     };
   };
 }

@@ -25,6 +25,7 @@
       typescript
       json
       toml
+      elixir
     ];
   };
 }
