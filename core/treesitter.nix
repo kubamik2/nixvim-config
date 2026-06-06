@@ -26,6 +26,7 @@
       json
       toml
       elixir
+      go
     ];
   };
 }

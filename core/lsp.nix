@@ -30,6 +30,9 @@ inputs: {
 
       # elixir
       elixirls.enable = true;
+
+      # go
+      gopls.enable = true;
     };
   };
 }
