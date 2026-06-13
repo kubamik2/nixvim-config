@@ -34,4 +34,13 @@ inputs: {
     };
   };
 
+
+  keymaps = [
+    {
+      mode = "n";
+      key = "<leader>;";
+      action = { __raw = "require('mini.starter').open"; };
+      options = { desc = "Open start screen"; };
+    }
+  ];
 }
