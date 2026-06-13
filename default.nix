@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+inputs: {
   imports = [
     ./custom/default.nix
     ./core/default.nix
