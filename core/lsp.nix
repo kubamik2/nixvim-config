@@ -33,6 +33,9 @@ inputs: {
 
       # go
       gopls.enable = true;
+
+      # wgsl
+      wgsl_analyzer.enable = true;
     };
   };
 }

@@ -27,6 +27,7 @@
       toml
       elixir
       go
+      wgsl
     ];
   };
 }
