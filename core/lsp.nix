@@ -21,7 +21,7 @@ inputs: {
 
       # lua formatter
       stylua.enable = true;
-      
+
       # python
       pyright.enable = true;
 
@@ -36,6 +36,14 @@ inputs: {
 
       # wgsl
       wgsl_analyzer.enable = true;
+
+      # Arduino
+      arduino_language_server = {
+        enable = true;
+        config = {
+          filetypes = [ "arduino" "ino" ];
+        };
+      };
     };
   };
 }
