@@ -10,5 +10,6 @@ inputs: {
     ./treesitter.nix
     ./lspconfig.nix
     ./lsp.nix
+    ./conform.nix
   ];
 }

@@ -139,9 +139,6 @@ inputs: {
 
     # Show diagnostics under the cursor
     { mode = "n"; key = "gl"; action = { __raw = "vim.diagnostic.open_float"; }; options = { desc = "Show diagnostics under the cursor"; }; }
-
-    # Format buffer
-    { mode = "n"; key = "<leader>f"; action = { __raw = "vim.lsp.buf.format"; }; options = { desc = "[F]ormat buffer"; }; }
   ];
 
   # Diagnostic Config
