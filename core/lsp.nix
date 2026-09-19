@@ -11,7 +11,17 @@ inputs: {
       };
 
       # c, c++
-      clangd.enable = true;
+      clangd = {
+        enable = true;
+        config = {
+          cmd = [
+            "clangd"
+            { __raw = ''
+              "--query-driver=" .. os.getenv("HOME") .. "/.platformio/packages/toolchain-*/bin/*"
+            ''; }
+          ];
+        };
+      };
 
       # lua
       lua_ls.enable = true;
