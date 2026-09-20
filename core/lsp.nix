@@ -17,7 +17,7 @@ inputs: {
           cmd = [
             "clangd"
             { __raw = ''
-              "--query-driver=" .. os.getenv("HOME") .. "/.platformio/packages/toolchain-*/bin/*"
+              "--query-driver=" .. os.getenv("HOME") .. "/.platformio/packages/toolchain-*/bin/*" .. ",/nix/store/*/bin/gcc,/nix/store/*/bin/g++"
             ''; }
           ];
         };
