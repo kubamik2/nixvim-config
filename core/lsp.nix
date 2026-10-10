@@ -16,9 +16,18 @@ inputs: {
         config = {
           cmd = [
             "clangd"
-            { __raw = ''
-              "--query-driver=" .. os.getenv("HOME") .. "/.platformio/packages/toolchain-*/bin/*" .. ",/nix/store/*/bin/gcc,/nix/store/*/bin/g++"
-            ''; }
+            # Have to do this monstrosity for Clangd to be able to detect toolchains
+            { __raw = ''"--query-driver=" .. os.getenv("HOME") .. "/.platformio/packages/toolchain-*/bin/*"''; }
+            ("--query-driver=" + builtins.concatStringsSep "," [
+              "/nix/store/*/bin/gcc"
+              "/nix/store/*/bin/g++"
+              "/nix/store/*/bin/*-elf-gcc"
+              "/nix/store/*/bin/*-elf-g++"
+              "/nix/store/*/bin/*-eabi-gcc"
+              "/nix/store/*/bin/*-eabi-g++"
+              "/nix/store/*/bin/*-linux-gnu-gcc"
+              "/nix/store/*/bin/*-linux-gnu-g++"
+            ])
           ];
         };
       };
