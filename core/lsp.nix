@@ -63,6 +63,12 @@ inputs: {
           filetypes = [ "arduino" "ino" ];
         };
       };
+
+      # Typescript, Javascript
+      ts_ls.enable = true;
+
+      # HTML
+      html.enable = true;
     };
   };
 }
