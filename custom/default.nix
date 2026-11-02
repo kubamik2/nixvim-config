@@ -3,6 +3,6 @@ inputs: {
     ./rustaceanvim.nix
     ./toggleterm.nix
     ./lualine.nix
-    ./neo-tree.nix
+    ./oil.nix
   ];
 }
